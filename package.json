@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "A small Power-Up for Trello",
   "main": "index.js",
-  "repository": "git@github.com:trello/weather-power-up.git",
+  "repository": "git@github.com:trello/my-first-power-up.git",
   "author": "Osmar Silva <osmar.silva@grupoicts.com.br>",
   "license": "MIT",
   "engines": {

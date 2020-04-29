@@ -4,6 +4,10 @@ const WHITE_ROCKET_ICON =
   'https://cdn.glitch.com/c69415fd-f70e-4e03-b43b-98b8960cd616%2Fwhite-rocket-ship.png?1495811896182';
 console.log('Hello World');
 
+const onBtnClick = function (t, opts) {
+  console.log('Someone clicked the button');
+};
+
 window.TrelloPowerUp.initialize({
   'card-buttons': function (t, options) {
     return [
@@ -48,5 +52,19 @@ window.TrelloPowerUp.initialize({
         },
       ];
     });
+  },
+
+  'board-buttons': function (t, options) {
+    return [
+      {
+        icon: {
+          dark: WHITE_ROCKET_ICON,
+          light: GREY_ROCKET_ICON,
+        },
+        text: 'Callback',
+        callback: onBtnClick,
+        condition: 'edit',
+      },
+    ];
   },
 });
