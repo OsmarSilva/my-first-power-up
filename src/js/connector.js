@@ -8,6 +8,10 @@ const onBtnClick = function (t, opts) {
   console.log('Someone clicked the button');
 };
 
+const onBtnReportsClick = function (t, opts) {
+  console.log('Open Reports!!!');
+};
+
 window.TrelloPowerUp.initialize({
   'card-buttons': function (t, options) {
     return [
@@ -63,6 +67,15 @@ window.TrelloPowerUp.initialize({
         },
         text: 'Callback',
         callback: onBtnClick,
+        condition: 'edit',
+      },
+      {
+        icon: {
+          dark: WHITE_ROCKET_ICON,
+          light: GREY_ROCKET_ICON,
+        },
+        text: 'Reports',
+        callback: onBtnReportsClick,
         condition: 'edit',
       },
     ];
